@@ -1,0 +1,554 @@
+Milestones for Examination Management Portal
+Modern Application Development I
+Project: Examination Management Portal (MAD-I)
+​
+
+The project is divided into 0th milestone, Core Requirements (6 Milestones),
+and Recommended Functionalities & Optional Enhancements (5
+Milestones).
+
+​
+
+All core milestones can be completed in any order.
+
+​
+
+Recommended and optional enhancements should only be started after the core
+milestones are done.
+
+​
+
+Each milestone includes a Git commit message. When completed, use a unique
+commit message and push your updates to GitHub.
+
+Milestone 0: GitHub Repository Setup (Mandatory) Deadline:17/11/2026
+
+✅ Expected Time: 1 day​
+📊 Completion Progress: 5%
+​
+
+Create a private GitHub repository.
+
+​
+
+Add a README.md with a short project description.
+
+​
+
+Set up .gitignore to exclude unnecessary files, if required. (not compulsory).
+
+​
+
+Commit and push the initial setup to the repository.
+
+​
+
+Refer to the git tracker document to add MADI-cs2003 as your collaborator, so
+that we can track your project. ( Requests will be accepted after term starts.)
+
+​
+
+Github Adding Collaborator Video: Adding Github Collaborator using VSCode
+and WSL
+
+​
+
+This milestone needs to be completed by 17th November 2026.
+
+Git Commit Message: Milestone-0 EMP-MAD-1
+
+Core Requirements (6 Milestones)
+Milestone: Database Models and Schema Setup
+
+✅ Expected Time: 5–7 days​
+📊 Completion Progress: 18%
+​
+
+Create models/tables for:
+​
+
+User (role: Admin / Examiner / Student)
+
+​
+
+Course
+
+​
+
+Examination
+
+​
+
+Examination Rubric
+
+​
+
+Examination Slot
+
+​
+
+Booking
+
+​
+
+Examiner Profile
+
+​
+
+Any additional tables if needed.
+
+​
+
+Define relationships : ( Course ↔ Examination, Examination ↔ Examination
+Rubric, Examination ↔ Examination Slot, Examiner ↔ Examination Slot, Student
+↔ Booking, Examination Slot ↔ Booking )
+
+​
+
+Ensure Admin user is pre-created programmatically through a Python script/file
+(using SQLite query or SQLAlchemy ORM).
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Authentication and Role-Based Access
+
+✅ Expected Time: 5 days​
+📊 Completion Progress: 10%
+​
+
+Implement User (Student) registration and login.
+
+​
+
+Implement Examiner registration and login.
+
+​
+
+Create Admin login (Admin is predefined, no registration allowed).
+
+​
+
+Examiners can log in only after being approved by Admin.
+
+​
+
+Redirect users to role-specific dashboards after login (Admin, Examiner,
+Student).
+
+​
+
+Restrict dashboard access based on user roles.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Admin Dashboard and Examination Management
+
+✅ Expected Time: 7–9 days​
+📊 Completion Progress: 20%
+Admin functionalities:
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+
+Dashboard showing total courses, examinations, examiners, students,
+examination slots, and bookings.
+Create, edit, and remove courses.
+Create, edit, and remove examinations.
+Create and manage examination rubrics.
+Add, approve, or deactivate examiners.
+Configure examination timelines.
+Open and close examiner slot creation.
+Open and close student slot booking.
+View and manage all examinations, courses, examiners, students, slots, and
+bookings.
+Search students, examiners, examinations, or bookings by name or ID.
+View all examination slots.
+Reschedule examination bookings when required.
+Change the assigned examiner in exceptional situations.
+View all historical examination and booking records.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Examiner Dashboard and Examination Slot Management
+
+✅ Expected Time: 7 days​
+📊 Completion Progress: 17%
+Examiner functionalities:
+​
+​
+​
+​
+
+Register, log in, and update profile.
+Access the dashboard only after Admin approval.
+View assigned examinations.
+View dashboard with assigned examinations, created examination slots, number
+of students booked, and pending evaluations.
+
+​
+​
+​
+​
+​
+​
+
+Create examination slots only during the slot creation period.
+Update or remove examination slots before student booking starts.
+View students booked for their examination slots.
+Evaluate students using examination rubrics.
+Submit marks and remarks.
+Ensure only the assigned examiner can manage their examination slots and
+evaluate students booked into those slots.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Student Dashboard and Examination Slot Booking System
+
+✅ Expected Time: 7 days​
+📊 Completion Progress: 15%
+Student functionalities:
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+
+Register, log in, and update profile.
+View available examinations.
+Search and filter examinations.
+View available examination slots.
+Book available examination slots.
+Cancel booking before the booking deadline.
+View booking status.
+View upcoming examinations.
+View examination schedule.
+View examination history.
+View published results and evaluation feedback.
+Prevent duplicate bookings for the same examination.
+Prevent booking when examination slots are full.
+Prevent booking when student slot booking is closed.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Examination Booking History and Evaluation Tracking
+
+✅ Expected Time: 5 days​
+📊 Completion Progress: 15%
+​
+​
+
+Maintain complete examination and booking history per student.
+Store and display booking records and examination completion details.
+
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+​
+
+Allow students to book slots only when student slot booking is open.
+Allow examiners to create slots only during the examiner slot creation period.
+Prevent overbooking beyond available slot capacity.
+Automatically close a slot when its capacity is reached.
+Maintain examination booking statuses (Booked / Cancelled / Completed).
+Maintain proper examination status tracking (Draft / Slot Creation / Booking
+Open / Closed / Completed).
+Allow examiners to evaluate only students booked into their own examination
+slots.
+Allow Admin to reschedule examination bookings when required.
+Allow Admin to change the assigned examiner when required.
+Admin can view all examination history and booking records.
+Examiners can view students booked into their assigned examination slots.
+Students can view only their own booking history, examination history, results,
+and feedback.
+Maintain examination evaluation records including marks and remarks.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Recommended/Optional Enhancements (5 Milestones)
+Milestone: API Integration
+
+✅ Expected Time: 7 days
+​
+​
+
+Create JSON-based APIs for examinations, examiners, students, examination
+slots, and bookings.
+Optional: Use Flask-RESTful or manual controllers (with at least 4 HTTP
+methods).
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Charts and Visualization
+
+✅ Expected Time: 5 days
+
+Use Chart.js (or similar) to show:
+​
+​
+​
+
+Admin: total examinations, bookings, examination completion statistics, examiner
+workload.
+Examiner: number of students evaluated, participant count per examination,
+examination completion statistics.
+Student: examination history, booking trends, examination results.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Frontend and Backend Validation
+
+✅ Expected Time: 5 days
+​
+​
+​
+​
+​
+​
+
+Add form validation using HTML5/JavaScript.
+Add backend validation in Flask routes/controllers.
+Prevent invalid examination bookings and duplicate bookings through validation.
+Validate examination dates and booking timelines.
+Validate examination slot capacity.
+Validate marks according to examination and rubric limits.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Responsive UI and Styling
+
+✅ Expected Time: 5 days
+​
+​
+​
+​
+
+Add styling using Bootstrap.
+Ensure mobile/tablet/PC responsiveness.
+Improve dashboard layouts and user experience.
+Improve examination, slot booking, evaluation, and result pages.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Milestone: Flask-Login Integration and Security
+
+✅ Expected Time: 5–7 days
+​
+
+Integrate Flask-Login or Flask-Security.
+
+​
+
+Restrict routes based on roles.
+
+​
+
+Protect sessions and unauthorized access.
+
+Git Commit Message: USE UNIQUE COMMIT MESSAGE ACCORDING TO MILESTONE
+
+Final Submission
+Milestone: Final Project Submission
+
+✅ Expected Time: 2 days​
+📊 After Completion Progress: 100%
+NOTE: This milestone task should be done on viva portal and commit message will be
+done on github repo.
+​
+
+Submit ZIP with code + 3–5 page report.
+
+​
+
+Submit a 3-10 minute demo video (Google Drive with access to anyone with the
+link).
+
+​
+
+Include a video link in the report.
+
+​
+
+Include a declaration of AI usage % in the same pdf report (if used or not
+declaration is mandatory).
+
+​
+
+Use this video How to Submit App Dev 1 & 2 Projects | Full Submission Guide +
+Viva Workflow | IITM BS on how to submit the app in the portal.
+
+Git Commit Message: Milestone-EMP Final-Submission
+
+Tracking Progress
+To track progress, you should:
+​
+
+Use Git commits for each milestone.
+
+​
+
+Test functionality after completing each milestone.
+
+​
+
+Log issues encountered and their resolutions in a README.md or GitHub Issues
+section.
+
+Timeline Overview
+Project Completion Overview
+Milestone
+
+Average Time Estimate
+
+Split (%)
+
+Progress (%)
+
+GitHub Setup
+
+1 day
+
+5%
+
+5%
+
+Database Setup
+
+5–7 days
+
+18%
+
+23%
+
+Authentication
+
+5 days
+
+10%
+
+33%
+
+Admin Dashboard
+
+7–9 days
+
+20%
+
+53%
+
+Examiner Dashboard
+
+7 days
+
+17%
+
+70%
+
+Student Dashboard
+
+7 days
+
+15%
+
+85%
+
+Booking & Evaluation
+Tracking
+
+5 days
+
+15%
+
+100%
+
+Extra Work Overview
+Milestone
+
+Average Time Estimate
+
+API Integration
+
+7 days
+
+Charts and Visualization
+
+5 days
+
+Frontend and Backend Validation
+
+5 days
+
+Responsive UI and Styling
+
+5 days
+
+Flask Login Integration & Security
+
+5–7 days
+
+Final Submission Overview
+Milestone
+
+Average Time Estimate
+
+Final Project Submission Details
+
+2 days
+
+Note:
+​
+
+Time estimates are averages. Spend time as needed, to understand and
+complete each milestone. Completing Milestone 0 and 6 core requirements are
+taken for grading in Viva1. After completing the core requirements, there are 5
+additional milestones for enhancements. These enhancements are not graded
+but can be completed for improved functionality or to be considered for the Best
+Course Project nomination.
+
+​
+
+Students can complete the core milestones in any order as per their approach to
+doing the project. They need not follow the same sequence as they appear in this
+document.
+
+​
+
+Students can have any number of commits in their project repository, but for a
+milestone to be considered as “complete”, the student must make a commit with
+a unique commit message of that milestone.
+
+​
+
+It is mandatory to push the entire codebase to GitHub before you submit the code
+on the viva-portal.
+~~~ Document Ends ~~~
+
+
